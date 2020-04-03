@@ -1,0 +1,70 @@
+body{
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.container{
+    height: 100%;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    grid-template-rows: repeat(3,2fr);
+    gap: 1em;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.box{
+    position: relative;
+    border: 3px dashed black;
+    background-image: url(https://source.unsplash.com/random);
+    animation: border 5s linear infinite; 
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay{
+    background-color: black;
+    opacity: .5;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    transition: all .5s ease-in;
+    height: 100%;
+    width: 100%;
+    top:100%;
+}
+
+.overlay p{
+    color: white;
+    font-family: sans-serif;
+}
+
+
+.box:hover .overlay{
+    top:0;
+
+}
+
+/* @keyframes border{
+
+    0%{
+
+        border: 3px dashed black;
+    }
+    50%{
+        border: 8px dotted black;
+    }
+
+    100%{
+        border: 5px dotted black;
+
+    } */
+
+
+
